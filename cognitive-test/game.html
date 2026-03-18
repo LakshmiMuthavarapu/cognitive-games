@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+<title>Cognitive Assessment</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="gameContainer">
+
+<h1 id="gameTitle">Game 1: Numbubbles</h1>
+
+<div id="trial" class="trial">Trial Round</div>
+
+<h2 id="question">Pop the bubble that equals the target number</h2>
+
+<div class="infoPanel">
+
+<h3>Target: <span id="target">10</span></h3>
+<h3>Score: <span id="score">0</span></h3>
+<h3>Points: <span id="stars">⭐</span></h3>
+
+<div class="timerBar">
+<div id="timerProgress"></div>
+</div>
+
+</div>
+
+<div id="gameArea" class="gameArea"></div>
+
+</div>
+
+<!-- LOAD ONLY FIRST GAME -->
+
+<script src="games/numbubbles.js"></script>
+
+<script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Game 2: Mental Rotation</title>
+
+<style>
+
+body{
+font-family:Arial;
+background:linear-gradient(120deg,#3c4b7d,#d3a0a0);
+color:white;
+text-align:center;
+padding-top:40px;
+}
+
+.box{
+background:rgba(255,255,255,0.1);
+padding:40px;
+border-radius:12px;
+width:520px;
+margin:auto;
+}
+
+.shape{
+font-size:70px;
+margin:30px;
+}
+
+.options{
+display:flex;
+justify-content:center;
+gap:25px;
+margin-top:20px;
+}
+
+.opt{
+font-size:50px;
+cursor:pointer;
+padding:10px;
+background:#ffd633;
+border-radius:10px;
+color:black;
+width:70px;
+height:70px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.opt:hover{
+transform:scale(1.1);
+}
+
+.timerBar{
+width:300px;
+height:10px;
+background:#ccc;
+border-radius:10px;
+margin:auto;
+margin-top:15px;
+}
+
+#timerProgress{
+height:100%;
+width:100%;
+background:#f39c12;
+border-radius:10px;
+transition:width 1s linear;
+}
+
+.info{
+margin-top:20px;
+line-height:1.8;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="box">
+
+<h2 id="gameTitle">Game 2: Mental Rotation</h2>
+
+<div id="trial">Trial Round</div>
+
+<p id="question">Choose the correct rotated shape</p>
+
+<div class="shape" id="target"></div>
+
+<!-- ✅ TIMER -->
+<div class="timerBar">
+    <div id="timerProgress"></div>
+</div>
+
+<!-- ✅ SCORE + STARS -->
+<div class="info">
+Score: <span id="score">0</span><br>
+Points: <span id="stars">⭐</span>
+</div>
+
+<!-- ✅ OPTIONS (NOW LAST) -->
+<div class="options" id="options"></div>
+
+</div>
+
+
+<script src="rotation.js"></script>
+
+</body>
+</html>

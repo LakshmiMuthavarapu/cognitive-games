@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Game 2: Shortcuts Puzzle</title>
+<link rel="stylesheet" href="../style.css">
+
+<style>
+
+.shortcutGrid{
+display:grid;
+grid-template-columns:repeat(5,65px);
+gap:10px;
+margin-top:20px;
+}
+
+.cell{
+width:65px;
+height:65px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:28px;
+background:rgba(255,255,255,0.2);
+border-radius:8px;
+}
+
+.wall{background:#333;}
+.goal{background:#2ecc71;}
+.player{background:#3498db;}
+
+.timerBar{
+width:260px;
+height:10px;
+background:#ccc;
+border-radius:10px;
+margin:auto;
+margin-top:10px;
+}
+
+#timerProgress{
+height:100%;
+width:100%;
+background:#f39c12;
+border-radius:10px;
+transition:width 1s linear;
+}
+
+.roundLabel{
+background:#ffd633;
+color:black;
+padding:6px 12px;
+border-radius:6px;
+display:inline-block;
+margin-bottom:10px;
+font-weight:bold;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+border:none;
+border-radius:6px;
+background:#ffd633;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="gameContainer" id="gameContainer" tabindex="0">
+
+<h1>Game 2: Shortcuts Puzzle</h1>
+
+<div id="trialScreen">
+
+<h2>How to Play</h2>
+
+<p>Move the blue marble to the star.</p>
+<p>Use arrow keys to navigate.</p>
+<p>Find the path through the maze.</p>
+
+<button onclick="startGame()">Start Trial</button>
+
+</div>
+
+<div id="gameScreen" style="display:none;">
+
+<div id="roundLabel" class="roundLabel">Trial Round</div>
+
+<!-- UPDATED INFO PANEL -->
+
+<div class="infoRow">
+
+<div>Score: <span id="score">0</span></div>
+
+<div>Points: <span id="stars">⭐</span></div>
+
+<div>Required Score: 80</div>
+
+</div>
+
+<div class="timerBar">
+<div id="timerProgress"></div>
+</div>
+
+<div id="gameArea"></div>
+
+</div>
+
+</div>
+
+<script src="shortcuts.js"></script>
+
+</body>
+</html>
